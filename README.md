@@ -17,5 +17,5 @@ O projeto foi construído utilizando apenas **HTML5 Semântico**, atendendo aos 
 
 ## Autor
 
-* **Nome:** Yuri Vinícius Alves
+* **Nome:** Yuri Vinicius Alves
 * **GitHub:** [yurivinicius-alves](https://github.com/yurivinicius-alves)
