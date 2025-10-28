@@ -4,66 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Futuro Profissional - Nossos Cursos/Projetos</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-     <header>
-        <h1>Futuro Profissional: Capacitação para o Amanhã</h1>
-     
-     <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="projetos.html">Nossos Cursos/Projetos</a></li>
-            <li><a href="cadastro.html">Cadastre-se</a></li>
-        </ul>
-        </nav>
+    
+    <header>
+        <div class="container">
+            <nav class="main-nav">
+                
+                <a href="index.html" class="logo">Futuro Profissional</a>
+                
+                <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
+                    &#9776; 
+                </button>
+    
+                <ul class="main-menu" id="main-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html">Nossos Cursos/Projetos</a></li>
+                    <li><a href="cadastro.html">Cadastre-se</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section>
+        <div class="container">
+            
             <h2>Nossos Cursos e Projetos Atuais</h2>
-            <p>Conheça as oportunidades que oferecemos para o desenvolvimento profissional</p>
-            <article>
-                <h3>Curso de Barbeiro Profissional</h3>
-                <p>Programa intensivo com foco em técnicas modernas de corte, barba, Sobrancelha. Turmas abertas todo mês.</p>
-                <figure>
-                   <img src="assets/images/barbearia.jpg" alt="Jovem em aula prática de barbearia." width="500">
-                <figcaption>Aprenda uma profissão de alta demanda.</figcaption>
-                </figure>
-            </article>
-            <article>
-                <h3>Curso de Informática Básica e Avançada</h3>
-                <p>Desde o básico até o avançado, incluindo pacotes Office, navegação segura.</p>
+            <p>Conheça as oportunidades que oferecemos para o desenvolvimento profissional.</p>
+
+            <div class="grid-12-col"> 
+                
+                <article class="card grid-span-6"> 
+                    <img src="assets/images/barbearia.jpg" alt="Jovem em aula prática de barbearia.">
+                    <div class="card-content">
+                        <h3>Curso de Barbeiro Profissional</h3>
+                        <p>Programa intensivo com foco em técnicas modernas de corte, barba, sobrancelha. Turmas abertas todo mês.</p>
+                        <a href="cadastro.html" class="btn btn-primary">Inscrever-se</a>
+                    </div>
                 </article>
-                </section>
 
-                <section>
-                    <h2>Seja Voluntário</h2>
-                    <p>Sua experiência e tempo são inestimaveis! Veja como voce pode ajudar a ensinar e inspirar a nova geração. </p>
-                    <ul>
-                        <li>Instrutor(a) para aulas práticas.</li>
-                        <li>Mentor(a) para orientação de carreira para alunos formados.</li>
-                        <li>Apoio administrativo e organização de eventos.</li>
-                    </ul>
-                    <p><a href="cadastro.html">Clique aqui para se candidatar ao voluntariado!</a></p>
-                </section>
-                <section>
-                    <h2>Como Doar e Apoiar esse projeto!</h2>
-                    <p>Sua contribuição faz a diferença! Veja como você pode ajudar: Sua doação garante a compra de materiais, manutenção dos equipamentos e no auxilio de estudo dos Jovens. Ajude a transformar uma vida hoje!</p>
-                    <figure>
-                        <img src="assets/images/doacao.jpg" alt="Certificado de conclusão de curso." width="400">
+                <article class="card grid-span-6"> 
+                    <img src="assets/images/cadastro.jpg" alt="Pessoa digitando em notebook">
+                    <div class="card-content">
+                        <h3>Curso de Informática Básica e Avançada</h3>
+                        <p>Desde o básico até o avançado, incluindo pacotes Office, navegação segura e introdução à programação.</p>
+                        <a href="cadastro.html" class="btn btn-primary">Inscrever-se</a>
 
-                        <figcaption>Cada real investido é um futuro construído. Doe e faça a diferença!</figcaption>
-                    </figure>
-                    <p><a href="cadastro.html">Quero fazer uma doação!</a></p>
-
-                </section>
+                    </div>
+                </article>
+                
+            </div> 
+        </div>
     </main>
+    
     <footer>
-        <section>
-            <h3>Nosso Endereço</h3>
-            <p>Rua Tarcilio Zoelner, 366 - São José dos Pinhais/PR</p>
-        </section>
-        <p>&copy; 2025 Futuro Profissional. Todos os direitos reservados.</p>,
+        <div class="container">
+            <section>
+                <h3>Nosso Endereço</h3>
+                <p>Rua Tarcilio Zoelner, 366 - São José dos Pinhais/PR</p>
+            </section>
+            <p>&copy; 2025 Futuro Profissional. Todos os direitos reservados.</p>
+        </div>
     </footer>
 </body>
 </html>

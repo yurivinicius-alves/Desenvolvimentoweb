@@ -1,0 +1,428 @@
+/* ======================================================= */
+/* 1. BASE E VARIÁVEIS (DESIGN SYSTEM) */
+/* ======================================================= */
+
+:root {
+    /* PALETA DE CORES (Mínimo 8 cores) */
+    --color-primary: #007bff;
+    --color-secondary: #ffc107;
+    --color-accent: #28a745;
+    --color-danger: #dc3545;
+
+    --color-bg-light: #f8f9fa;
+    --color-bg-white: #ffffff;
+    --color-text-dark: #343a40;
+    --color-text-light: #6c757d;
+
+
+    /* TIPOGRAFIA HIERÁRQUICA (Mínimo 5 tamanhos) */
+    --font-family-base: 'Arial', sans-serif;
+
+    --font-size-h1: 3rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
+    --font-size-body: 1.125rem; /* AJUSTADO: Aumentado de 1rem (16px) para 1.125rem (18px) */
+    --font-size-small: 0.875rem;
+
+
+    /* SISTEMA DE ESPAÇAMENTO MODULAR (Múltiplos de 8px) */
+    --space-xs: 0.5rem;    /* 8px */
+    --space-sm: 1rem;      /* 16px */
+    --space-md: 1.5rem;    /* 24px */
+    --space-lg: 2rem;      /* 32px */
+    --space-xl: 3rem;      /* 48px */
+    --space-xxl: 4rem;     /* 64px */
+}
+
+/* Reset básico e aplicação das variáveis */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-dark);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-body); /* Usará agora 1.125rem */
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+}
+
+/* ======================================================= */
+/* 2. LAYOUTS (GRID e ESTRUTURA) */
+/* ======================================================= */
+
+/* ESTRUTURA PRINCIPAL (CSS GRID) */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Container para centralizar o conteúdo */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-sm) 0;
+}
+
+main {
+    padding: var(--space-lg) var(--space-sm);
+}
+
+header {
+    background-color: var(--color-bg-white);
+    padding: var(--space-sm) 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: var(--color-text-dark);
+    color: var(--color-bg-white);
+    padding: var(--space-lg) var(--space-sm);
+    text-align: center;
+}
+
+footer p {
+    margin-top: var(--space-sm);
+    font-size: var(--font-size-small);
+}
+
+footer section {
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-text-light);
+}
+
+/* GRID DE 12 COLUNAS (Requisito da Entrega II) */
+.grid-12-col {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--space-md);
+}
+
+.grid-span-6 {
+    grid-column: span 6;
+}
+
+
+/* ======================================================= */
+/* 3. COMPONENTES: NAVEGAÇÃO, CARDS, BOTÕES E FORMULÁRIO */
+/* ======================================================= */
+
+/* NAVEGAÇÃO PRINCIPAL (Flexbox) */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--color-primary);
+    font-size: 2rem; 
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.main-menu {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+    padding: var(--space-xs);
+    transition: color 0.3s;
+}
+
+.main-menu a:hover,
+.main-menu a:focus {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+/* CARDS RESPONSIVOS */
+.card {
+    background-color: var(--color-bg-white);
+    border-radius: var(--space-xs);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--space-lg);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: var(--space-md);
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    margin-top: 0;
+}
+
+/* BOTÕES (Requisito: estados visuais) */
+.btn {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--space-xs);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, opacity 0.3s;
+    border: 2px solid transparent;
+    cursor: pointer;
+    margin-top: var(--space-sm);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-bg-white);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-text-dark);
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: #ffda6a;
+}
+
+/* LINKS DO FOOTER */
+footer a {
+    color: var(--color-bg-light);
+    text-decoration: none;
+}
+
+/* === FORMULÁRIOS (GRID e COMPONENTES) === */
+
+form {
+    background-color: var(--color-bg-white);
+    padding: var(--space-lg);
+    border-radius: var(--space-xs);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: var(--space-lg);
+}
+
+fieldset {
+    border: 1px solid var(--color-text-light);
+    padding: var(--space-md);
+    margin-bottom: var(--space-lg);
+    border-radius: var(--space-xs);
+}
+
+legend {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    color: var(--color-primary);
+    padding: 0 var(--space-xs);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    gap: var(--space-md);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 12; 
+}
+
+/* Campos de largura total para o Form */
+.form-grid .grid-span-full {
+    grid-column: span 12;
+}
+
+/* Campos de meia largura (6/12) para o Form - Desktop First */
+@media screen and (min-width: 769px) {
+    .form-grid .grid-span-6 {
+        grid-column: span 6;
+    }
+}
+
+
+/* Estilo dos Inputs, Selects e Textareas */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: var(--space-xs);
+    margin-top: var(--space-xs);
+    border: 1px solid var(--color-text-light);
+    border-radius: 4px;
+    /* Usa a nova variável aumentada */
+    font-size: var(--font-size-body); 
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Foco e Validação (Requisito: estados visuais) */
+input:focus, select:focus, textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* Estilização para erros (validação nativa do HTML) */
+input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: var(--color-danger);
+}
+
+/* Botoões de Ação do Formulário (Flexbox) */
+.form-actions {
+    display: flex;
+    gap: var(--space-md);
+    padding-top: var(--space-sm);
+}
+
+/* === AJUSTE DE IMAGEM === */
+/* Ajuste de Imagem de Destaque na Página Inicial (index.html) */
+main article figure img {
+    max-width: 60%; /* Diminui a imagem para 60% da largura original */
+    margin: var(--space-md) auto; /* Centraliza a imagem horizontalmente */
+    border-radius: var(--space-xs);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block; /* Garante que a imagem se comporte bem com margin: auto */
+}
+
+
+/* ======================================================= */
+/* 4. BREAKPOINTS (RESPONSIVIDADE) - 5 Breapoints */
+/* ======================================================= */
+
+/* Mobile (Padrão: max-width 768px) */
+@media screen and (max-width: 768px) {
+    
+    /* Mobile: Reduz o tamanho de h1 */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    
+    /* Mobile: Cards e Grid geral ocupam a largura total (12 colunas) */
+    .grid-span-6 {
+        grid-column: span 12 !important; 
+    }
+    
+    /* Mobile: Menu (Ocultar botão, mostrar menu na vertical) */
+    .menu-toggle {
+        display: block; 
+        background: none;
+        border: none;
+        color: var(--color-text-dark);
+        font-size: var(--space-lg);
+        cursor: pointer;
+    }
+    
+    .main-menu {
+        display: none; 
+        flex-direction: column; 
+        
+        position: absolute;
+        top: 75px; 
+        left: 0;
+        width: 100%;
+        
+        background-color: var(--color-bg-white);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        
+        padding: var(--space-sm) 0;
+    }
+
+    .main-menu li {
+        border-bottom: 1px solid var(--color-bg-light);
+    }
+
+    .main-menu a {
+        display: block; 
+        padding: var(--space-sm) var(--space-lg); 
+    }
+    
+    /* Mobile: Formulário - Botões empilhados */
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+        margin: var(--space-xs) 0;
+    }
+    
+    /* Garante que a imagem principal não fique pequena demais em mobile */
+    main article figure img {
+        max-width: 90%; 
+    }
+}
+
+/* Breakpoint 1: Tablet em paisagem (769px a 992px) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    /* Cards e Formulário já estão em 2 colunas */
+    .container {
+        width: 95%;
+    }
+}
+
+/* Breakpoint 2: Desktop médio (993px a 1200px) */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    /* Mantém o layout de desktop. */
+}
+
+/* Breakpoint 3: Desktop grande (1201px a 1400px) */
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+    /* Ajustes para telas maiores */
+}
+
+/* Breakpoint 4: Ultra Large Desktop (acima de 1400px) */
+@media screen and (min-width: 1401px) {
+    .container {
+        max-width: 1400px; 
+    }
+}

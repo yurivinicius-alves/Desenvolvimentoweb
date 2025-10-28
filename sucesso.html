@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Realizado com Sucesso!</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- Ícone de sucesso simples (opcional) -->
+    <link rel="icon" href="https://placehold.co/16x16/28a745/ffffff?text=%E2%9C%93" type="image/x-icon">
+</head>
+<body>
+    
+    <!-- HEADER (Mantido para consistência) -->
+    <header>
+        <div class="container main-nav">
+            <a href="index.html" class="logo">MeuProjeto</a>
+            <nav>
+                <!-- O menu em uma página de sucesso costuma ser simplificado -->
+                <ul class="main-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <!-- Link para a página de Login (se houver) -->
+                
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN: CONTEÚDO DE SUCESSO -->
+    <main>
+        <div class="container">
+            <!-- Centraliza o conteúdo principal -->
+            <section style="
+                max-width: 600px; 
+                margin: var(--space-xxl) auto; 
+                text-align: center;
+                background-color: var(--color-bg-white);
+                padding: var(--space-xl);
+                border-radius: var(--space-xs);
+                box-shadow: 0 8px 16px rgba(40, 167, 69, 0.15); /* Sombra suave, ligada à cor de sucesso */
+                border-top: 5px solid var(--color-accent);
+            ">
+                <!-- Ícone Grande de Sucesso (Exemplo com SVG) -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: var(--space-md);">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+
+                <h1 style="color: var(--color-accent); font-size: var(--font-size-h2);">Sucesso!</h1>
+                
+                <p>
+                    Seu cadastro foi realizado com sucesso. Agradecemos por se juntar à nossa comunidade!
+                </p>
+                <p>
+                    Em breve, você receberá um e-mail de boas-vindas com todas as informações necessárias para começar a usar a plataforma.
+                </p>
+
+                <!-- Botão de Ação para levar o usuário a outro lugar -->
+                <a href="index.html" class="btn btn-primary" style="margin-top: var(--space-lg);">
+                    Voltar para a Home
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER (Mantido para consistência) -->
+    <footer>
+        <div class="container">
+            <section class="grid-12-col">
+                <div class="grid-span-6">
+                    <h3>Sobre Nós</h3>
+                    <p>Realizando sonhos, investimos na educação e na </p>
+                </div>
+                <div class="grid-span-6">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+            </section>
+            <p>&copy; 2025 MeuProjeto. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
