@@ -3,54 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Futuro Profissional - Início</title>
+    <title>Futuro Profissional | Início</title>
+
+    <!-- CARREGANDO SEU CSS EXTERNO (main.css) -->
+    <link rel="stylesheet" href="main.css"> 
+    <!-- Incluindo Font Awesome para ícones de sucesso/erro na validação -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    
 </head>
 <body>
-    
     <header>
         <div class="container">
             <nav class="main-nav">
-                
-                <a href="index.html" class="logo">Futuro Profissional</a>
+                <!-- Links agora usam o atributo 'data-route' e o hash (#) -->
+                <a href="#home" class="logo" data-route="home">Futuro Profissional</a>
                 
                 <button class="menu-toggle" aria-controls="main-menu" aria-expanded="false">
-                    &#9776; </button>
-    
+                    &#9776; 
+                </button>
+        
                 <ul class="main-menu" id="main-menu">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="projetos.html">Nossos Cursos/Projetos</a></li>
-                    <li><a href="cadastro.html">Cadastre-se</a></li>
+                    <li><a href="#home" data-route="home" class="btn btn-secondary">Início</a></li>
+                    <li><a href="#projetos" data-route="projetos" class="btn btn-secondary">Nossos Cursos/Projetos</a></li>
+                    <li><a href="#cadastro" data-route="cadastro" class="btn btn-secondary">Cadastre-se</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- CONTAINER PRINCIPAL: ONDE TODO O CONTEÚDO SERÁ INJETADO PELO JS -->
     <main>
-        <div class="container">
-            
-            <section>
-                <h2>O que Fazemos: Transformando Vidas pela Capacitação</h2>
-                
-                <article>
-                    <h3>Nossa Missão</h3>
-                    <p>Promover a inclusão social e profissional através de cursos técnicos e básicos, como Barbearia e Informática, abrindo portas para o mercado de trabalho e o empreendedorismo.</p>
-                    
-                    <figure>
-                        <img src="assets/images/missao.jpg" alt="Jovens aprendendo em uma oficina da ONG Futuro Profissional">
-                        <figcaption>Oficinas práticas de capacitação profissional.</figcaption>
-                    </figure>
-                </article>
-            </section>
-
-            <section>
-                <h2>Contato Rápido</h2>
-                <p>Fale conosco ou venha nos visitar!</p>
-                <address>
-                    Email: <a href="mailto:yuriviniciusalves01@gmail.com">Fale Conosco por Email</a><br>
-                    Telefone: (41) 99882-4578
-                </address>
-            </section>
+        <div class="container" id="app-content">
+            <!-- Conteúdo carregado aqui -->
         </div>
     </main>
 
@@ -58,10 +43,205 @@
         <div class="container">
             <section>
                 <h3>Nosso Endereço</h3>
-                <p>Rua Tarcilio Zoelner, 06 - São José dos Pinhais/PR</p>
+                <p>Rua Tarcilio Zoelner, 366 - São José dos Pinhais/PR</p>
             </section>
             <p>&copy; 2025 Futuro Profissional. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+
+    <!-- ####################################################### -->
+    <!-- CONTEÚDO DAS PÁGINAS ARMAZENADO EM TEMPLATES HTML -->
+    <!-- ####################################################### -->
+
+    <!-- TEMPLATE HOME (ANTIGO index.html) -->
+    <template id="home-template">
+        <section>
+            <h2>O que Fazemos: Transformando Vidas pela Capacitação</h2>
+            
+            <article>
+                <h3>Nossa Missão</h3>
+                <p>Promover a inclusão social e profissional através de cursos técnicos e básicos, como Barbearia e Informática, abrindo portas para o mercado de trabalho e o empreendedorismo.</p>
+                
+                <figure>
+                    <!-- ATENÇÃO: Verifique o caminho da imagem! -->
+                    <img src="assets/images/missao.jpg" alt="Jovens aprendendo em uma oficina da ONG Futuro Profissional">
+                    <figcaption>Oficinas práticas de capacitação profissional.</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section>
+            <h2>Contato Rápido</h2>
+            <p>Fale conosco ou venha nos visitar!</p>
+            <address>
+                Email: <a href="mailto:yuriviniciusalves01@gmail.com">Fale Conosco por Email</a><br>
+                WhatsApp: <a href="https://wa.me/5541998824578" target="_blank" title="Falar via WhatsApp">(41) 99882-4578</a>
+            </address>
+        </section>
+    </template>
+
+    <!-- TEMPLATE PROJETOS (ANTIGO projetos.html) -->
+    <template id="projetos-template">
+        <h2>Nossos Cursos e Projetos Atuais</h2>
+        <p>Conheça as oportunidades que oferecemos para o desenvolvimento profissional.</p>
+
+        <div class="grid-12-col"> 
+            
+            <article class="card grid-span-6"> 
+                <img src="assets/images/barbearia.jpg" alt="Jovem em aula prática de barbearia.">
+                <div class="card-content">
+                    <h3>Curso de Barbeiro Profissional</h3>
+                    <p>Programa intensivo com foco em técnicas modernas de corte, barba, sobrancelha. Turmas abertas todo mês.</p>
+                    <a href="#cadastro" data-route="cadastro" class="btn btn-primary">Inscrever-se</a>
+                </div>
+            </article>
+
+            <article class="card grid-span-6"> 
+                <img src="assets/images/cadastro.jpg" alt="Pessoa digitando em notebook">
+                <div class="card-content">
+                    <h3>Curso de Informática Básica e Avançada</h3>
+                    <p>Desde o básico até o avançado, incluindo pacotes Office, navegação segura e introdução à programação.</p>
+                    <a href="#cadastro" data-route="cadastro" class="btn btn-primary">Inscrever-se</a>
+                </div>
+            </article>
+            
+        </div>
+    </template>
+
+    <!-- TEMPLATE CADASTRO (ANTIGO cadastro.html) -->
+    <template id="cadastro-template">
+        <section>
+            <h2>Inscrição para Cursos e Voluntariado</h2>
+            
+            <article>
+                <h3>Atenção aos Benefícios:</h3>
+                <p>Nossos cursos e programas de voluntariado são prioritariamente destinados aos moradores de São José dos Pinhais/PR, onde nossa sede está localizada, para maximizar o impacto em nossa comunidade. Preencha o formulário abaixo para se inscrever!</p>
+            </article>
+
+            <form id="registration-form" novalidate> <!-- ID crucial para o JS -->
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    
+                    <div class="form-grid"> 
+                        
+                        <div class="form-group grid-span-full">
+                            <label for="nome">Nome Completo: *</label>
+                            <input type="text" id="nome" name="nome" required minlength="5" placeholder="Seu nome completo">
+                            <small class="error-message" id="error-nome"></small> <!-- Local do erro -->
+                        </div>
+
+                        <div class="form-group grid-span-6">
+                            <label for="email">E-mail: *</label>
+                            <input type="email" id="email" name="email" required placeholder="yuriviniciusalves01@gmail.com">
+                            <small class="error-message" id="error-email"></small>
+                        </div>
+
+                        <div class="form-group grid-span-6"> 
+                            <label for="cpf">CPF: *</label>
+                            <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: 999.999.999-99" placeholder="999.999.999-99">
+                            <small class="error-message" id="error-cpf"></small>
+                        </div>
+                        
+                        <div class="form-group grid-span-6"> 
+                            <label for="telefone">Telefone: *</label>
+                            <input type="tel" id="telefone" name="telefone" required 
+                                    pattern="\(\d{2}\) \d{4,5}-\d{4}"
+                                    title="Formato: (99) 99999-9999 ou (99) 9999-9999"
+                                    placeholder="(41) 99882-4578">
+                            <small class="error-message" id="error-telefone"></small>
+                        </div>
+
+                        <div class="form-group grid-span-6"> 
+                            <label for="dataNasc">Data de Nascimento: *</label>
+                            <input type="date" id="dataNasc" name="dataNasc" required>
+                            <small class="error-message" id="error-dataNasc"></small>
+                        </div>
+                        
+                    </div> 
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço</legend>
+                    
+                    <div class="form-grid">
+
+                        <div class="form-group grid-span-6"> 
+                            <label for="cep">CEP: *</label>
+                            <input type="text" id="cep" name="cep" required 
+                                    pattern="\d{5}-\d{3}" 
+                                    title="Formato: 99999-999"
+                                    placeholder="99999-999">
+                            <small class="error-message" id="error-cep"></small>
+                        </div>
+                        
+                        <div class="form-group grid-span-full"> 
+                            <label for="endereco">Endereço (Rua e Número): *</label>
+                            <input type="text" id="endereco" name="endereco" required placeholder="Ex: Rua Tarcilio Zoelner, 000">
+                            <small class="error-message" id="error-endereco"></small>
+                        </div>
+
+                        <div class="form-group grid-span-6"> 
+                            <label for="cidade">Cidade: *</label>
+                            <input type="text" id="cidade" name="cidade" required>
+                            <small class="error-message" id="error-cidade"></small>
+                        </div>
+
+                        <div class="form-group grid-span-6"> 
+                            <label for="estado">Estado: *</label>
+                            <select id="estado" name="estado" required>
+                                <option value="">-- Selecione o Estado --</option>
+                                <option value="AC">Acre</option>
+                                <option value="PR">Paraná</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                            </select>
+                            <small class="error-message" id="error-estado"></small>
+                        </div>
+                        
+                    </div>
+                </fieldset>
+
+                <div class="form-actions"> 
+                    <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+                    <button type="reset" class="btn btn-secondary">Limpar Formulário</button>
+                </div>
+            </form>
+        </section>
+        
+        <section>
+            <figure>
+                <img src="assets/images/cadastro.jpg" alt="Pessoa preenchendo um formulário digital.">
+                <figcaption>Seu futuro começa aqui! Cadastre-se e participe de nossos projetos.</figcaption>
+            </figure>
+        </section>
+    </template>
+
+    <!-- TEMPLATE SUCESSO (ANTIGO sucesso.html) -->
+    <template id="sucesso-template">
+        <section id="sucesso" class="message-section">
+            <i class="fas fa-check-circle" style="font-size: 4rem; color: var(--color-accent, #28a745); margin-bottom: 1rem;"></i>
+
+            <h1 style="color: var(--color-primary, #007bff); font-size: 2em;">Sucesso!</h1>
+            
+            <p>
+                Seu cadastro foi realizado com sucesso. Agradecemos por se juntar à nossa comunidade!
+            </p>
+            <p>
+                Em breve, você receberá um e-mail de boas-vindas com todas as informações necessárias no e-mail: <strong id="success-email-display">yuriviniciusalves01@gmail.com</strong>.
+            </p>
+
+            <a href="#home" data-route="home" class="btn btn-primary" style="margin-top: 20px;">
+                Voltar para a Home
+            </a>
+        </section>
+    </template>
+
+
+    
+    <!-- JAVASCRIPT: LÓGICA DO SPA, ROTAS E VALIDAÇÃO -->
+    
+     <script src="main.js"></script>
+
 </body>
 </html>
