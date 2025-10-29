@@ -1,61 +1,98 @@
-Desenvolvimentoweb
+🚀 A Jornada de Construção Deste Projeto
 
-Futuro Profissional: Capacitação para o Amanhã
+Este sumário descreve como o projeto foi estruturado, desde a fundação (HTML) até a interatividade (JavaScript), garantindo que ele não apenas funcione, mas ofereça uma ótima experiência ao usuário em qualquer dispositivo.
 
-Este repositório contém o projeto do website institucional da ONG fictícia "Futuro Profissional", que oferece cursos de capacitação (Barbearia, Informática) para jovens em São José dos Pinhais/PR.
+🏗️ Fase 1: O Alicerce (HTML5 Semântico)
 
-O projeto está dividido em duas etapas de entrega, detalhadas abaixo.
+Começamos pelo básico, mas com foco total na qualidade. A primeira entrega foi a espinha dorsal do site, garantindo que a estrutura fosse sólida e acessível.
 
-💻 Entrega I: Estrutura e Semântica (HTML)
+O que entregamos aqui:
 
-A primeira fase focou na criação da estrutura básica e do conteúdo do site, utilizando apenas HTML5 Semântico.
+Páginas Essenciais Prontas: Criamos as quatro telas principais que o usuário precisa:
 
-Requisitos Atendidos:
+index.html (Boas-vindas)
 
-Páginas Principais: index.html (Início), projetos.html (Cursos/Projetos), cadastro.html (Formulário) e a página de confirmação sucesso.html.
+projetos.html (Conteúdo Principal/Cursos)
 
-Navegação: Uso da tag <nav> e links de navegação consistentes.
+cadastro.html (Formulário de Inscrição)
 
-Estrutura Semântica: Uso de tags como <header>, <main>, <footer>, <section>, <article>, <figure>, e <figcaption>.
+sucesso.html (Mensagem de Confirmação)
 
-Formulário Complexo: O arquivo cadastro.html apresenta um formulário completo com validação nativa do HTML5 (required, minlength, pattern) e agrupamento lógico (<fieldset>).
+Navegação Clara: Montamos o menu (<nav>) para que o usuário possa se movimentar facilmente entre todas essas páginas.
 
-Multimídia: Inclusão de imagens (assets/images/) em todas as páginas.
+Estrutura Acessível: Usamos tags semânticas do HTML5 (<header>, <main>, <footer>, <section>, <article>, <figure>, <fieldset>) para dar significado ao conteúdo, o que é ótimo para SEO e acessibilidade.
 
-✨ Entrega II: Estilização e Leiautes (CSS3)
+Formulário Inteligente: O formulário já veio com validações nativas do HTML (como required, pattern, minlength), garantindo que os dados cheguem corretos antes mesmo de pensar em JavaScript.
 
-A segunda fase concentra-se na aplicação de CSS3 para transformar a estrutura HTML em uma interface visual profissional, responsiva e acessível.
+🎨 Fase 2: A Cara do Projeto (Estilização e Responsividade)
 
-Requisitos Atendidos:
+Com o alicerce pronto, chegou a hora de dar vida ao projeto! O objetivo foi criar uma identidade visual coesa e garantir que o site ficasse perfeito em qualquer tamanho de tela.
 
-Sistema de Design:
+Os destaques do design e layout:
 
-Implementação de um Design System completo usando Variáveis CSS customizadas (:root).
+Design System Simplificado: Para manter a consistência, definimos um "sistema de design" com variáveis CSS (:root), incluindo uma paleta de 8 cores, uma hierarquia tipográfica com 5 tamanhos e um sistema de espaçamento baseado no múltiplo de 8px.
 
-Paleta de cores (mínimo 8 cores) e tipografia hierárquica (mínimo 5 tamanhos) definidas em variáveis.
+Layout Adaptável (Responsivo): Construímos o layout pensando em todos os dispositivos, utilizando o que há de melhor no CSS:
 
-Sistema de espaçamento modular (múltiplos de 8px).
+Flexbox para alinhamentos em uma dimensão.
 
-Leiaute Responsivo:
+CSS Grid para layouts bidimensionais complexos.
 
-Estrutura principal e componente de cards implementados com CSS Grid e Flexbox.
+5 Breakpoints estratégicos para que o design se ajuste de celular a desktop.
 
-Desenvolvimento de 5 Breakpoints responsivos para adaptação perfeita em dispositivos móveis e desktops.
+Componentes Visuais: Criamos elementos reutilizáveis e bem pensados, como o menu superior com a versão Hambúrguer para dispositivos móveis, cards estilizados para os cursos e formulários com feedback visual imediato.
 
-Sistema de grid customizado (12 colunas) aplicado.
+⚙️ Fase 3: A Magia da Interatividade (JavaScript Moderno)
 
-Componentes:
+Na última etapa, transformamos o site estático em uma experiência fluida, eliminando a necessidade de recarregar a página a cada clique, ou seja, uma SPA (Single Page Application).
 
-Navegação sofisticada (menu principal).
+Funcionalidades que dão vida ao site:
 
-Menu hambúrguer e navegação mobile implementada nos breakpoints menores.
+Funcionalidade
 
-Formulários estilizados com feedback visual de validação.
+O que o usuário ganha com isso?
 
-Cards de projeto responsivos e com bom design.
+Roteamento SPA por Hash
 
-Autor
+Navegação super rápida (ex: #home, #cursos) sem a irritante tela branca de carregamento.
 
-Nome: Yuri Vinicius Alves
+Sistema de Templates
 
-GitHub: yurivinicius-alves
+Conteúdo novo é injetado dinamicamente a partir de <template> prontos no HTML, o que torna o carregamento eficiente.
+
+Manipulação do DOM
+
+Todo o conteúdo é inserido no container principal de forma limpa e otimizada (innerHTML e cloneNode()).
+
+Validação de Formulário
+
+O usuário recebe mensagens de erro personalizadas e amigáveis, guiando-o para o preenchimento correto.
+
+Máscara de Entrada
+
+O campo formata automaticamente CPF/telefone enquanto o usuário digita, economizando tempo e evitando erros.
+
+Armazenamento Local (LocalStorage)
+
+(Esta é opcional, mas se ativada:) Os dados do formulário podem ser guardados no navegador para uma experiência contínua.
+
+🛠 Resumo das Tecnologias
+
+Este projeto foi construído usando o trio fundamental do desenvolvimento web moderno:
+
+HTML5
+
+CSS3 (Com foco em Flexbox, Grid e Media Queries)
+
+JavaScript ES6+ (DOM, Eventos, e arquitetura SPA)
+
+
+GitHub
+
+Yuri Vinicius Alves
+
+https://github.com/yurivinicius-alves
+
+📄 Licença
+
+Este é um projeto acadêmico e pode ser usado livremente para estudos e aprendizado.
